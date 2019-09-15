@@ -7,7 +7,17 @@
  Note that the main() function was not included in this repo, as it would include my Azure subscription code. As such, an additional python script must be created locally using the following text. This is then the main function that will be run in order to run the image recognition script.  
  
  Main function:
+
+import numpy as np
+import pandas as pd
+import requests
+import Cheque_Recog
+
+def main():
+    subscription_key = "INSERT_SUB_KEY"
+    pic_url = input("Enter a picture of a cheque URL: ") 
+    Cheque_Recog.check_cheque(subscription_key,pic_url)
+    
+main()
  
- 
- 
- This repo is still a work in progress.
+This repo is still a work in progress.
